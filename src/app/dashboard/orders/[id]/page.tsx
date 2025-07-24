@@ -8,6 +8,7 @@ import type { Product, OrderedProduct } from "@/types";
 import { Package, Calendar, Clock, Truck, CheckCircle, XCircle, AlertCircle, MapPin, Phone, Mail, Building, FileText, User, Hash } from "lucide-react";
 import { useAuth } from "@/app/AuthProvider";
 import { useRef } from "react";
+import Link from "next/link";
 
 interface Order {
   id: string;
@@ -175,12 +176,12 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
   return (
     <div className="max-w-screen-lg mx-auto py-6 px-2 sm:px-4">
       <div className="mb-4">
-        <a
+        <Link
           href="/dashboard/orders"
           className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg border border-gray-300 font-medium shadow-sm transition"
         >
           ← Tüm Siparişlere Dön
-        </a>
+        </Link>
       </div>
       <div className="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <h1 className="text-2xl sm:text-3xl ">Sipariş #{order.id}</h1>

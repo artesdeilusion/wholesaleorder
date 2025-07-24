@@ -5,6 +5,7 @@ import { Order } from '@/types';
 import { format } from 'date-fns';
 import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+import Link from 'next/link';
 
 export function RecentOrders() {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -201,12 +202,12 @@ export function RecentOrders() {
           </ul>
         </div>
         <div className="mt-6">
-          <a
+            <Link
             href="/dashboard/orders"
             className="w-full flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
           >
             Tüm siparişleri gör
-          </a>
+          </Link>
         </div>
       </div>
     </div>

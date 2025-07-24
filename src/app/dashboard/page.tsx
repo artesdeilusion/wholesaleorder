@@ -26,18 +26,18 @@ export default function DashboardPage() {
               Hızlı Erişimler
             </h3>
             <div className="mt-4 space-y-3">
-              <a
+                <Link
                 href="/dashboard/products/new"
                 className="block w-full text-left px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-md"
               >
                 Ürün Ekle
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/dashboard/orders"
                 className="block w-full text-left px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-md"
               >
                 Tüm Siparişler
-              </a>
+              </Link>
               <Link
                 href="/dashboard/shop"
                 className="block w-full text-left px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-md"
